@@ -400,8 +400,9 @@ export default function Page() {
                 @media (max-width: 1023px) {
                   #mobile-hero-tagline-span {
                     display: inline-block !important;
-                    width: 209.3px !important;
-                    height: 38.975px !important;
+                    white-space: nowrap !important;
+                    width: auto !important;
+                    height: auto !important;
                     margin-top: -104px !important;
                     margin-left: 38px !important;
                     color: #ff8b04 !important;
