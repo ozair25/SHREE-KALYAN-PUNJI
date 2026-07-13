@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui;
+  --font-serif: var(--font-serif), ui-serif, Georgia;
+  --font-script: var(--font-script), cursive;
+
+  --color-brand-navy: #0B1B3A;
+  --color-brand-gold: #FF4500;
+  --color-brand-cream: #FAF6E8;
+}
+
+/* Base style resets and customizations */
+@layer base {
+  body {
+    color: var(--color-brand-navy);
+    /* High-end textured security/currency paper with guilloche waves */
+    background-color: #FAF6E8;
+    background-image: 
+      radial-gradient(circle at 15% 15%, rgba(255, 69, 0, 0.08) 0%, transparent 45%),
+      radial-gradient(circle at 85% 85%, rgba(11, 27, 58, 0.04) 0%, transparent 55%),
+      /* Guilloche secure pattern waves */
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M0 60 Q 30 50, 60 60 T 120 60 M0 65 Q 30 55, 60 65 T 120 65 M0 55 Q 30 45, 60 55 T 120 55 M60 0 Q 50 30, 60 60 T 60 120 M65 0 Q 55 30, 65 60 T 65 120 M55 0 Q 45 30, 55 60 T 55 120' fill='none' stroke='%23FF4500' stroke-opacity='0.08' stroke-width='0.5'/%3E%3Cpath d='M0 0 L120 120 M120 0 L0 120' fill='none' stroke='%23FF4500' stroke-opacity='0.03' stroke-width='0.3'/%3E%3C/svg%3E"),
+      /* Organic paper fibers noise */
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23paperNoise)' opacity='0.7'/%3E%3C/svg%3E"),
+      linear-gradient(135deg, #FAF6E8 0%, #F5ECCB 50%, #EBDCA4 100%);
+    background-attachment: fixed;
+  }
+}
+
+@utility animate-spin-slow {
+  animation: spin 20s linear infinite;
+}
+
+/* Custom premium class to apply the textured vintage banknote/parchment background */
+.bg-brand-cream {
+  background-color: #FAF6E8;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(255, 69, 0, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(11, 27, 58, 0.04) 0%, transparent 55%),
+    /* Guilloche secure pattern waves */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M0 60 Q 30 50, 60 60 T 120 60 M0 65 Q 30 55, 60 65 T 120 65 M0 55 Q 30 45, 60 55 T 120 55 M60 0 Q 50 30, 60 60 T 60 120 M65 0 Q 55 30, 65 60 T 65 120 M55 0 Q 45 30, 55 60 T 55 120' fill='none' stroke='%23FF4500' stroke-opacity='0.08' stroke-width='0.5'/%3E%3Cpath d='M0 0 L120 120 M120 0 L0 120' fill='none' stroke='%23FF4500' stroke-opacity='0.03' stroke-width='0.3'/%3E%3C/svg%3E"),
+    /* Organic paper fibers noise */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23paperNoise)' opacity='0.7'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, #FAF6E8 0%, #F5ECCB 50%, #EBDCA4 100%);
+}
+
